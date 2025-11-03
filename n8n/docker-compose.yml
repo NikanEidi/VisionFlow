@@ -1,0 +1,43 @@
+version: "3.8"
+
+services:
+  n8n:
+    image: n8nio/n8n:latest
+    restart: always
+    ports:
+      - "5678:5678"
+    env_file:
+      - .env
+    depends_on:
+      - gotenberg
+    environment:
+      - N8N_ENCRYPTION_KEY=${N8N_ENCRYPTION_KEY}
+      - N8N_BASIC_AUTH_USER=${N8N_BASIC_AUTH_USER}
+      - N8N_BASIC_AUTH_PASSWORD=${N8N_BASIC_AUTH_PASSWORD}
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
+      - GOOGLE_DRIVE_CLIENT_ID=${GOOGLE_DRIVE_CLIENT_ID}
+      - GOOGLE_DRIVE_CLIENT_SECRET=${GOOGLE_DRIVE_CLIENT_SECRET}
+      - GENERIC_TIMEZONE=America/Toronto
+      - EXECUTIONS_PROCESS=main
+      - WEBHOOK_URL=http://localhost:5678/
+      - GOTENBERG_URL=http://gotenberg:3000
+    volumes:
+      - ./workflows:/home/node/.n8n/workflows
+      - n8n_data:/home/node/.n8n
+    networks:
+      - visionflow_net
+
+  gotenberg:
+    image: gotenberg/gotenberg:8
+    restart: always
+    ports:
+      - "3000:3000"
+    networks:
+      - visionflow_net
+
+volumes:
+  n8n_data:
+
+networks:
+  visionflow_net:
+    driver: bridge
