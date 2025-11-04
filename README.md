@@ -185,8 +185,8 @@ Regardless of the provided data, Vision Flow intelligently infers missing contex
 ║                                                                           ║
 ║  ┌─ STRICT JSON PARSING ───────────────────────────────────────────┐      ║
 ║  │ Ensures model output is valid and structured for downstream     │      ║
-║  │ nodes.                                                           │     ║
-║  └──────────────────────────────────────────────────────────────────┘     ║
+║  │ nodes.                                                          │      ║
+║  └─────────────────────────────────────────────────────────────────┘      ║
 ║                                                                           ║
 ║  ┌─ DYNAMIC FOLDER MANAGEMENT ─────────────────────────────────────┐      ║
 ║  │ Creates or reuses company-specific folders in Google Drive      │      ║
@@ -195,8 +195,8 @@ Regardless of the provided data, Vision Flow intelligently infers missing contex
 ║                                                                           ║
 ║  ┌─ ERROR-RESILIENT EXECUTION ─────────────────────────────────────┐      ║
 ║  │ Uses try/catch and conditional filters to prevent workflow      │      ║
-║  │ crashes.                                                         │     ║
-║  └──────────────────────────────────────────────────────────────────┘     ║
+║  │ crashes.                                                        │      ║
+║  └─────────────────────────────────────────────────────────────────┘      ║
 ║                                                                           ║
 ║  ┌─ BINARY-SAFE FILE HANDLING ─────────────────────────────────────┐      ║
 ║  │ Verifies and passes only valid PDF binaries to the uploader     │      ║
@@ -280,7 +280,7 @@ Regardless of the provided data, Vision Flow intelligently infers missing contex
    ╔═══════════════════════════════════════════════════════════════════╗
    ║                                                                   ║
    ║  ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓     ║
-   ║  ┃  STEP 5: SMART STORAGE                                    ┃    ║
+   ║  ┃  STEP 5: SMART STORAGE                                   ┃     ║
    ║  ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛     ║
    ║  The PDF is uploaded to the correct Google Drive folder —         ║
    ║  creating one if needed — and tagged with metadata for easy       ║
@@ -300,7 +300,7 @@ Regardless of the provided data, Vision Flow intelligently infers missing contex
 │                                                                           │
 │  ✓  Works seamlessly with n8n's queue or webhook triggers for scaling.    │
 │                                                                           │
-│  ✓  Designed for single-user or multi-user extension (SaaS-ready).        │
+│  ✓  Designed for single-user.                                             │
 │                                                                           │
 │  ✓  Can integrate with Sheets, Gmail, or Notion for advanced tracking.    │
 │                                                                           │
