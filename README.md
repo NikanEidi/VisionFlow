@@ -21,7 +21,7 @@
 ```
 
 > **Vision Flow** is an end-to-end AI automation system that autonomously generates tailored, ATS-optimized resumes for any job posting.  
-> Built entirely on **n8n**, **OpenRouter (GPT-4o-mini)**, and **Google Drive**, it orchestrates the full pipeline — from job data input to a ready-to-use PDF resume — without a single line of backend code.
+> Built entirely on **n8n**, **OpenRouter (GPT-4o-mini)**, and **Google Drive**, it orchestrates the full pipeline — from job data input to a ready-to-use PDF resume.
 
 ---
 
